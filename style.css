@@ -441,7 +441,7 @@ footer .cr span{
 }
 
 /*Phone*/
-@media (max-width: 400px){
+@media (max-width: 450px){
     html{
         font-size: 45% ;
     }

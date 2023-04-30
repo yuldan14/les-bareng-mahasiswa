@@ -49,6 +49,44 @@ a:hover{
     position: relative;
     z-index: 1000;
 }
+.navbar .navbar-menu{
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 3%;
+}
+
+.menu-home, .menu-program, .menu-tutor, .menu-kontak{
+    border: 1px solid rgba(1,1,3,.7);
+    box-shadow: 1px 1px 3px rgba(1,1,3,1);
+    border-radius: 50%;
+    background-color: rgba(1,1,3,.7);
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    align-items: center;
+    margin: 1rem 2rem;
+} 
+.navbar-menu a:hover{
+    color: var(--primary);
+    transition: 0.3s;
+}
+.navbar-menu a::after{
+    content: '';
+    display: block;
+    border-bottom: 0.2rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+.navbar-menu a:hover::after{
+    transform: scaleX(0.2);
+}
+.menu-home a, .menu-program a, .menu-tutor a, .menu-kontak a{
+    color: white;
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+}
 span{
     color: var(--primary);
 
@@ -360,7 +398,7 @@ footer .cr span{
         right: 7%;
         display: block;
     }
-    .navbar-nav{
+    /*.navbar-nav{
         position: absolute;
         top:110%;
         right: -100%;
@@ -371,6 +409,17 @@ footer .cr span{
     }
     .navbar-nav.active{
         right: 0;
+    }
+    */
+    .navbar-nav{
+        display: none;
+    }
+    .menu-home, .menu-program, .menu-tutor, .menu-kontak{
+        transition: 0.3s;
+    }
+    .navbar-menu.aktif{
+        display: block;
+        transition: 0.3s;
     }
 
     .navbar-nav a{
@@ -441,7 +490,7 @@ footer .cr span{
 }
 
 /*Phone*/
-@media (max-width: 450px){
+@media (max-width: 400px){
     html{
         font-size: 45% ;
     }

@@ -1,0 +1,441 @@
+:root{
+    --primary:#569daa;
+    --bg:#010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration:none ;
+}
+
+body{
+    background-color: var(--bg);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+}
+
+.navbar{
+    border-bottom: 0.2rem solid #266570;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.9);
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;  
+}
+.navbar-logo{
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1000;
+}
+span{
+    color: var(--primary);
+
+}
+
+.navbar-nav a{
+    color: white;
+    display: inline-block;
+    margin: 0 2rem;
+    font-size: 1.1rem;
+}
+
+.navbar-nav a:hover{
+    color: var(--primary);
+    transition: 0.3s linear;
+}
+
+.navbar-nav a::after{
+    content: '';
+    border-bottom: 0.1rem solid var(--primary);
+    display: block;
+    padding-bottom: 0.5rem;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+
+
+}
+
+.navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar-extra a{
+    color: white;
+    margin: 0.5rem;
+}
+.navbar-extra #menu{
+    display: none;
+}
+.navbar-extra a:hover{
+    color: var(--primary);
+    transition: 0.3s linear;
+}
+
+.hero{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(img/study.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    color: var(--bg);
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    justify-content: right;
+    position: relative;
+    mix-blend-mode: difference;
+}
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(1,1,3,1)3%, rgba(255,255,255,0)15%);
+    width: 100%;
+    height:100%;
+}
+.hero h1{
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+}
+main{
+    margin-right: 4rem;
+}
+main p{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+main .daftar{
+    text-decoration: none
+}
+main .daftar a{
+    color: var(--bg);
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    border-radius: 0.5rem;
+    padding: 2%;
+    box-shadow: 1px 1px 3px rgba(1,1,3,1);
+    background-color: var(--primary);
+}
+
+main .daftar a:hover{
+    background-color: var(--primary);
+}
+
+main .daftar a::after{
+    border-bottom: 0.2rem solid #1a1b1b;
+    display: block;
+    content: '';
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+main .daftar a:hover::after{
+    transform: scaleX(0.3);
+}
+.program{
+    padding: 7rem 0;
+}
+.program .content{
+    margin: 0;
+}
+.program .content img{
+    width: 400px;
+    height: 300px;
+}
+
+.program h2{
+    text-align: center;
+    margin-bottom: 12rem;
+}
+.program .content p{
+    font-size: 1.2rem;
+    margin: 0 7%;
+}
+.program .content h3{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 80px;
+}
+.program .content .program-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 7%;  
+}
+.program .content .program-2{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 5% 7%;
+    
+}
+.program .content .program-3{
+    display: flex;
+    margin: 5% 7%;
+    align-items: center;
+    justify-content: center;  
+}
+
+
+.tutor{
+    max-width: 100vw;
+    position: relative;
+    color: white;
+    z-index: 1;
+    padding: 7rem 0;
+}
+.tutor span{
+    color: white;
+}
+.tutor h2{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.tutor .foto img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.tutor .foto {
+    justify-content: center;
+    display: flex;
+   
+}
+.tutor .content{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin-top: 10rem;
+}
+
+.tutor .content h3{
+    text-align: center;
+}
+
+
+.contact{
+    padding: 7rem 0;
+}
+.contact .container{
+    background-color: #181a1a;
+    width: 80%;
+    margin-top: 2rem;
+    padding: 2rem;
+    min-height: 100%;
+    display: flex;
+    margin: 0 10%;
+}
+.contact h2{
+    text-align: center;
+    padding: 0 0 3rem 0;
+}
+.contact .container .map{
+    object-fit: cover;
+    flex: 1 1 45rem;
+    width: 1%;
+    display: flex;
+}
+
+.contact form .input-group{
+    align-items: center;
+    display: flex;
+    margin-top: 2rem;
+    background: none;
+    background-color: var(--bg);
+    padding-left: 2rem;
+    
+}
+.contact .container form .input-group input{
+    width: 100%;
+    padding: 2rem;
+    margin-left: 20px;
+    font-size: 1.7rem;
+    background: none;
+    color: white;
+    flex: 1 1 45rem;
+}
+
+.contact .container form a.send{
+    display: inline-block;
+    margin: 2rem 43%;
+    color: #eee;
+}
+.contact .container form a.send:hover{
+    color: var(--primary);
+    transition: 0.2s linear;
+}
+.contact .container form a.send::after{
+    content: '';
+    display: block;
+    border: 1px solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+.contact .container form a.send:hover::after{
+    transform: scaleX(0.7);
+}
+footer{
+    background-color: var(--primary);
+    padding: 2rem 0 0 0;
+    text-align: center;
+}
+footer .medsos{
+    text-align: center;
+    
+}
+footer .medsos a{
+    padding: 0 2rem;
+    color: #010101;
+
+}
+footer .menu{
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+footer .menu a{
+    margin: 0 2rem;
+    color: #010101;
+    
+}
+footer a:hover{
+    color: white;
+    transition: 0.2s linear;
+}
+footer .cr span{
+    color: var(--bg);
+}
+
+/*Media kueri*/
+
+
+/*Laptop*/
+@media (max-width: 1366px){
+    html{
+        font-size: 75% ;
+    }
+}
+/*Tablet*/
+@media (max-width: 810px){
+    html{
+        font-size: 62.5% ;
+    }
+    .navbar{
+        justify-content: center;
+    }
+    .navbar-extra #menu{
+        display: inline-block;
+    }
+    .navbar-extra{
+        position: absolute;
+        right: 7%;
+        display: block;
+    }
+    .navbar-nav{
+        position: absolute;
+        top:110%;
+        right: -100%;
+        background-color: white;
+        width: 30rem;
+        transition: 0.3s;
+        padding-bottom: 1rem;
+    }
+    .navbar-nav.active{
+        right: 0;
+    }
+
+    .navbar-nav a{
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5px;
+        font-size: 2rem;
+    }
+    .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+    .navbar-nav a:hover::after{
+        transform: scaleX(0.15);
+    }
+    .program h2{
+        padding-top: 5rem;
+    }
+    .program .content img{
+        width: 200px;
+        height: 150px;
+        margin:auto;
+    }
+    .program .content .program-1{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .program .content .program-2{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .program .content .program-3{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .program .content .desc p{
+        line-height: 29px;
+    }
+    .tutor h2{
+        padding-top: 5rem;
+    }
+    .tutor .foto img{
+        width: 200px;
+        height: 200px;
+    }
+    .tutor{
+        font-size: 1rem;
+    }
+    .contact h2{
+        padding-top: 5rem;
+    }
+    .contact .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact .container .map{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .contact .container form a.send::after{
+        transform-origin: 0 0;
+    }
+    .contact .container form a.send:hover::after{
+        transform: scaleX(0.5);
+    }
+    
+}
+
+/*Phone*/
+@media (max-width: 450px){
+    html{
+        font-size: 55% ;
+    }
+}

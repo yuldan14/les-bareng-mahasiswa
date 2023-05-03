@@ -53,11 +53,11 @@ a:hover{
 .navbar .navbar-menu{
     position: absolute;
     top: 100%;
-    right: -10rem;
+    right: 3%;
+    transform: scale(0);
 }
 .navbar .navbar-menu ul{
     justify-content: right;
-    
     list-style: none;
 }
 .navbar .navbar-menu ul li{
@@ -345,7 +345,8 @@ main .daftar a:hover::after{
     transition: 0.2s linear;
 }
 .contact .container form a.send:hover::after{
-    transform: scaleX(0.7);
+    transform: scaleX(0.5);
+    transform-origin: 5px 0;
 }
 footer{
     background-color: var(--primary);
@@ -422,7 +423,8 @@ footer .cr span{
 
     .navbar .navbar-menu.aktif{
         right: 3%;
-        transition: 0.2s linear;
+        transform: scale(1);
+        transition: 0.1s linear;
     }
     .navbar-nav a{
         color: var(--bg);
